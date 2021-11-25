@@ -1261,8 +1261,12 @@ input[type='checkbox'] {
 	background-color: #fbf9f5;
 }
 
-.cards .fas,
-.cards .far {
+.cards .bi-house-door-fill,
+.cards .bi-book-half,
+.cards .bi-plus-square,
+.cards .bi-book,
+.cards .bi-bootstrap,
+.cards .bi-caret-right-square-fill{
 	color: #50aaff;
 	font-size: 3rem;
 	line-height: 6rem;
