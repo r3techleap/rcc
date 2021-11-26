@@ -10,12 +10,12 @@
 	
 	/* Preloader */
 	$(window).on('load', function() {
-		var preloaderFadeOutTime = 500;
+		var preloaderFadeOutTime = 100;
 		function hidePreloader() {
 			var preloader = $('.spinner-wrapper');
 			setTimeout(function() {
 				preloader.fadeOut(preloaderFadeOutTime);
-			}, 500);
+			}, 100);
 		}
 		hidePreloader();
 	});
@@ -78,7 +78,7 @@
     /* Image Slider - Swiper */
     var imageSliderTwo = new Swiper('.image-slider-2', {
         autoplay: {
-            delay: 500,
+            delay: 1000,
             disableOnInteraction: false
 		},
         loop: true,
