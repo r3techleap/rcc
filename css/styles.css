@@ -47,9 +47,8 @@ html {
     width: 100%;
 	height: 100%;
 }
-
 body, p {
-	color: #555; 
+	color: rgb(0, 0, 0); 
 	font: 400 1rem/1.625rem "Montserrat", sans-serif;
 }
 
@@ -66,32 +65,32 @@ body, p {
 }
 
 h1 {
-	color: #333;
+	color: rgb(13, 69, 102);
 	font: 700 2.75rem/3.375rem "Montserrat", sans-serif;
 }
 
 h2 {
-	color: #333;
+	color: rgb(9, 91, 129);
 	font: 700 2.25rem/2.875rem "Montserrat", sans-serif;
 }
 
 h3 {
-	color: #333;
+	color: rgb(248, 14, 14);
 	font: 700 1.625rem/2.125rem "Montserrat", sans-serif;
 }
 
 h4 {
-	color: #333;
+	color: rgb(34, 86, 146);
 	font: 700 1.25rem/1.875rem "Montserrat", sans-serif;
 }
 
 h5 {
-	color: #333;
+	color: rgb(255, 0, 0);
 	font: 700 1.125rem/1.75rem "Montserrat", sans-serif;
 }
 
 h6 {
-	color: #333;
+	color: rgb(255, 0, 0);
 	font: 700 1rem/1.625rem "Montserrat", sans-serif;
 }
 
@@ -597,8 +596,8 @@ input[type='checkbox'] {
 	display: inline-block;
 	width: 1rem;
 	height: 1rem;
+	background-color: #00af35;
 	border-radius: 100%;
-	background-color: #0969c2;
 	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
@@ -606,11 +605,13 @@ input[type='checkbox'] {
 .spinner .bounce1 {
 	-webkit-animation-delay: -0.32s;
 	animation-delay: -0.32s;
+	background-color: #ec2626;
 }
 
 .spinner .bounce2 {
 	-webkit-animation-delay: -0.16s;
 	animation-delay: -0.16s;
+	background-color: #d1ff05;
 }
 
 @-webkit-keyframes sk-bouncedelay {
@@ -701,7 +702,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item:hover {
-	background-color: #fff;
+	background-color: rgb(255, 255, 255);
 }
 
 .navbar-custom .dropdown-item .item-text {
@@ -714,10 +715,10 @@ input[type='checkbox'] {
 
 .navbar-custom .dropdown-divider {
 	width: 100%;
-	height: 1px;
+	height: 5px;
 	margin: 0.75rem auto 0.725rem auto;
 	border: none;
-	background-color: #c4d8dc;
+	background-color: #066185;
 	opacity: 0.2;
 }
 /* end of dropdown menu */
@@ -777,7 +778,7 @@ input[type='checkbox'] {
 	margin-bottom: 1.25rem;
 	margin-left: 0.5rem;
 	padding-top: 2rem;
-	border: 0.125rem solid #fff;
+	border: 0.125rem solid rgb(255, 5, 5);
 	border-radius: 50%;
 	font-weight: 400;
 	font-size: 2.25rem;
@@ -2212,9 +2213,22 @@ a h1{
 a{
 	text-decoration: none;
 }
+@media (max-width: 1080px){
+	.bigscreen{
+		display: none;
+	}
+	.smallscreen{
+		position: relative;
+		left: 7rem;
+	}
+}
 @media (max-width: 768px){
 	.bigscreen{
 		display: none;
+	}
+	.smallscreen{
+		position: relative;
+		left: 0rem;
 	}
 }
 .card-deck{
@@ -2226,14 +2240,4 @@ a{
 .smallscreen{
 	margin-left: -200px;
 	margin-top: 20px;
-}
-marquee{
-	width: 100%;
-	background: transparent;
-	border-radius: 10px;
-	font-size: 14px;
-	color: #000;
-	font-weight: bold;
-	text-align: center;
-	color: red;
 }
