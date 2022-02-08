@@ -49,8 +49,9 @@
     });
 
 
-    /* Countdown Timer - The Final Countdown */
-	$('#clock').countdown('2022/01/28 08:50:56') /* change here your "countdown to" date */
+    /* Countdown Timer - The Final Countdown 
+    
+	$('#clock').countdown('2022/01/28 08:50:56') 
 	.on('update.countdown', function(event) {
 		var format = '<span class="counter-number">%D<br><span class="timer-text">Days</span></span><span class="counter-number">%H<br><span class="timer-text">Hours</span></span><span class="counter-number">%M<br><span class="timer-text">Minutes</span></span><span class="counter-number">%S<br><span class="timer-text">Seconds</span></span>';
 		$(this).html(event.strftime(format));
@@ -59,8 +60,7 @@
 	$(this).html('This offer has expired!')
 		.parent().addClass('disabled');
     });
-
-
+    */
     /* Image Slider 2 - Swiper */
     var imageSliderOne = new Swiper('.image-slider-1', {
         autoplay: {
@@ -437,3 +437,67 @@
 $(document).ready(function(){
     $("#myModal").modal('show');
 });
+function showDate() {
+    let date = new Date();
+    let d = date.getDate();
+    let months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    let m = months[date.getMonth()];
+    let y = date.getFullYear();
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let weekDay = days[date.getDay()];
+    let currentDate = document.querySelector("#date");
+  
+    currentDate.innerHTML = `${m} ${d}, ${y} ${weekDay}`;
+  }
+  
+  function showTime() {
+    let date = new Date();
+    let h = date.getHours();
+    let m = date.getMinutes();
+    let s = date.getSeconds();
+    let amPm = "AM";
+  
+    if (h === 0) {
+      h = 12;
+    }
+  
+    if (h > 12) {
+      h = h - 12;
+      amPm = "PM";
+    }
+  
+    if (h < 10) {
+      h = `0${h}`;
+    }
+  
+    if (m < 10) {
+      m = `0${m}`;
+    }
+  
+    if (s < 10) {
+      s = `0${s}`;
+    }
+  
+    let clock = document.querySelector("#my-clock");
+  
+    clock.innerHTML = `${h}:${m}:${s} ${amPm}`;
+  
+    setTimeout(showTime, 1000);
+  }
+  
+  showTime();
+  showDate();
+  

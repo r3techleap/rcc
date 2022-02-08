@@ -2255,3 +2255,37 @@ a{
 .modal-content{
 	border: 4px solid cadetblue;
 }
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  
+  body {
+	background: #212121;
+  }
+  
+  .content {
+	height: 500px;
+	max-width: 1280px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  .clock {
+	display: flex;
+	align-self: center;
+	color: #4fb4a6;
+	font-size: 80px;
+	font-family: "Abel", sans-serif;
+  }
+  
+  .date {
+	display: flex;
+	align-self: center;
+	color: #4fb4a6;
+	font-size: 50px;
+	font-family: "Abel", sans-serif;
+  }
