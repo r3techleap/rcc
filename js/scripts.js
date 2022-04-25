@@ -49,18 +49,16 @@
     });
 
 
-    /* Countdown Timer - The Final Countdown 
     
-	$('#clock').countdown('2022/01/28 08:50:56') 
+	$('#clock').countdown('2022/04/29 10:00:00') 
 	.on('update.countdown', function(event) {
 		var format = '<span class="counter-number">%D<br><span class="timer-text">Days</span></span><span class="counter-number">%H<br><span class="timer-text">Hours</span></span><span class="counter-number">%M<br><span class="timer-text">Minutes</span></span><span class="counter-number">%S<br><span class="timer-text">Seconds</span></span>';
 		$(this).html(event.strftime(format));
 	})
 	.on('finish.countdown', function(event) {
-	$(this).html('This offer has expired!')
+	$(this).html('Time is over!')
 		.parent().addClass('disabled');
     });
-    */
     /* Image Slider 2 - Swiper */
     var imageSliderOne = new Swiper('.image-slider-1', {
         autoplay: {
